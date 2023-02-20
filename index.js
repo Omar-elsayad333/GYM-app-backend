@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use((req, res, next) => {
     console.log(req.path, req.method)
-    
+
     next()
 })
 
@@ -32,3 +32,6 @@ mongoose.connect(process.env.MONGO_URI)
         console.log(error)
     }
 )
+
+// Export the Express API
+module.exports = app;
