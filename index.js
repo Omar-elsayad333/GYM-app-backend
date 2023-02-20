@@ -6,6 +6,7 @@ const workoutRoutes = require('./routes/workouts.js')
 
 // Express app
 const app = express()
+mongoose.set('strictQuery', true);
 
 // Middleware
 app.use(express.json())
